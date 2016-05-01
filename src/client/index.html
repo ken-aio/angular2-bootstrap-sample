@@ -2,10 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Angular2Sample</title>
   <base href="/">
   {{content-for 'head'}}
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
@@ -20,7 +23,7 @@
   -->
 </head>
 <body>
-  <angular2-sample-app>Loading...</angular2-sample-app>
+  <app-root>Loading...</app-root>
 
   <script src="vendor/es6-shim/es6-shim.js"></script>
   <script src="vendor/systemjs/dist/system-polyfills.js"></script>
@@ -31,6 +34,7 @@
   <script src="vendor/angular2/bundles/angular2.dev.js"></script>
   <script src="vendor/angular2/bundles/http.dev.js"></script>
   <script src="vendor/angular2/bundles/router.dev.js"></script>
+  <script src="vendor/ng2-bootstrap/bundles/ng2-bootstrap.js"></script>
 
   <script>
     System.config({
@@ -39,6 +43,9 @@
           format: 'register',
           defaultExtension: 'js'
         }
+      },
+      map: {
+        'moment': 'vendor/moment/moment.js'
       }
     });
     System.import('app.js').then(null, console.error.bind(console));

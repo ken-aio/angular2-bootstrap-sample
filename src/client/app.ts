@@ -1,4 +1,4 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {Angular2SampleApp} from './app/angular2-sample';
+import {AppRoot} from './app/root';
 
-bootstrap(Angular2SampleApp, []);
+bootstrap(AppRoot, []);
